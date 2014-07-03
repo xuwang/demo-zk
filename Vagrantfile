@@ -30,7 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           'recipe[xu-zookeeper::default]'
         ]
         chef.json = {:vagrant => {:ipaddress => "#{ip}", :node_id => "#{i}"},
-                    :exhibitor=>{:opts => {:hostname => "#{ip}"}},
+                    :exhibitor =>{:opts => {:hostname => "#{ip}"}},
                     :exhibitor => {:defaultconfig => {:servers_spec => "1:192.168.33.21,2:192.168.33.22,3:192.168.33.23"}}
                     } 
       end
