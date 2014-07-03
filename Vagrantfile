@@ -5,12 +5,9 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  #config.vm.box_url = "https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_provisionerless.box"
-  config.vm.box_url = "file:///Users/xuwang/projects/vag/opscode_ubuntu-12.04_provisionerless.box"
+  config.vm.box_url = "https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_provisionerless.box"
   
   # Installing/Upgrading chef on the target image
-  # May the omnibus install is prefered, but it installs chef 10.14.2
-  # But we need chef > 10.16.4 for the newer apt cookbook
   $bootstrap_chef = <<-SCRIPT
     sudo apt-get update -y && 
     sudo apt-get install -q -y rubygems && 
