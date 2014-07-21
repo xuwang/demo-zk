@@ -1,4 +1,4 @@
-demo-data
+demo-kafka
 =====================
 Build a data log bus with 1 zookeeper node and 3 kafka brookers:
 
