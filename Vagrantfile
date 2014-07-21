@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   
   #zookeepers
-  (1..3).each do |i| 
+  (1..1).each do |i| 
     config.vm.define "zk#{i}" do |node|
       ip = "192.168.33.2#{i}"
       node.vm.box = "zk#{i}"
