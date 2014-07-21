@@ -2,19 +2,8 @@ default[:zookeeper][:version] = "3.4.6"
 default[:zookeeper][:mirror] = "http://mirrors.ibiblio.org/apache/zookeeper/zookeeper-#{default[:zookeeper][:version]}/zookeeper-#{default[:zookeeper][:version]}.tar.gz"
 default[:zookeeper][:checksum] = '47ef17c8430b'
 
-#default[:zookeeper][:user] = "vagrant"
-#default[:zookeeper][:group] = "vagrant"
-#    dowlnload will pull down a prebuilt exhibitor jar
-#default[:exhibitor][:mirror] = 'http://example.com/exhibitor-1.5.0.jar'
-#default[:exhibitor][:install_method] = 'download'
-#default[:exhibitor][:checksum] = ''
-
-default[:exhibitor][:snapshot_dir] = "/var/lib/zookeeper"
-default[:exhibitor][:transaction_dir] = "/var/lib/zookeeper"
-default[:exhibitor][:log_index_dir] = "/var/lib/zookeeper"
 default[:exhibitor][:log_to_syslog] = "1"
 
-default[:exhibitor][:opts][:hostname] =  vagrant[:ipaddress]
 # For --contiftype file
 default[:exhibitor][:defaultconfig][:cleanup_period_ms] = 5 * 60 * 1000
 default[:exhibitor][:defaultconfig][:check_ms] = '30000'

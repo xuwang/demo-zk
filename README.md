@@ -1,9 +1,11 @@
-demo-zk
-=======
+demo-data
+=====================
+Build a data log bus with 1 zookeeper node and 3 kafka brookers:
 
-A demo of 3-nodes zookeeper cluster (vagrant + virtualbox + chef + zookeeper + exhibitor)
+1. install VirtualBox
+2. install Vagrant with vagrant-omnibus and vagrant-berkshelf plugins
+3. install Berkshelf
+4. berks install
+5. vagrant up
 
-1. Install VirtualBox
-2. Install Vagrant
-3. vagrant up
-4. Exhibitor UI: http://192.168.33.21:8080/exhibitor/v1/ui/index.html
+
